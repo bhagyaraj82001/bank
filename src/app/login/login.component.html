@@ -8,15 +8,15 @@
             <h2 class="text-center text-danger">Login form</h2>
             <form action="" class=" m-5 p-5">
                 <div>
-                    <!--ac no-->
-                    <input (change)="acnoChange($event)" class="form-control" type="text" [placeholder]="accPlaceholder">
+                    <!--(change)="acnoChange($event)"-->
+                    <input #acno class="form-control" type="text" [placeholder]="accPlaceholder">
                 </div>
                 <div>
-                    <!-- password-->
-                    <input (change)="pswdChange($event)" class="form-control mt-3" type="password" placeholder="enter password">
+                    <!-- (change)="pswdChange($event)"-->
+                    <input #pswd  class="form-control mt-3" type="password" placeholder="enter password">
                 </div>
                 <div>
-                    <input (click)="login()" class="btn btn-primary mt-3" type="button" value="login" name="" id="loginBtn">
+                    <input (click)="login(acno,pswd)" class="btn btn-primary mt-3" type="button" value="login" name="" id="loginBtn">
                 </div>
             </form>
             <div>

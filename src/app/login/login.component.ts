@@ -44,30 +44,57 @@ database:any={
      
   }
 
-  login(){
+  // login(){
 
-   //fetch acno
-   var acno=this.acno
-   console.log(acno);
+  //  //fetch acno
+  //  var acno=this.acno
+  //  console.log(acno);
 
-   //fetch pswd
-   var pswd=this.pswd
-   console.log(pswd)
+  //  //fetch pswd
+  //  var pswd=this.pswd
+  //  console.log(pswd)
    
-   let userDetails = this.database
-   if(acno in userDetails){
-     if(pswd==userDetails[acno]['password']){
-        alert('login sucessful')
-     }
-     else{
-      alert('incorrect')
-     }
-   }
-   else{
-    alert('no user')
-   }
+  //  let userDetails = this.database
+  //  if(acno in userDetails){
+  //    if(pswd==userDetails[acno]['password']){
+  //       alert('login sucessful')
+  //    }
+  //    else{
+  //     alert('incorrect')
+  //    }
+  //  }
+  //  else{
+  //   alert('no user')
+  //  }
 
-  }
+  // }
   
+  login(a:any,p:any){
+
+    console.log(a)
+
+    //fetch acno
+    var acno=this.acno
+    console.log(acno);
+ 
+    //fetch pswd
+    var pswd=this.pswd
+    console.log(pswd)
+    
+    let userDetails = this.database
+    if(acno in userDetails){
+      if(pswd==userDetails[acno]['password']){
+         alert('login sucessful')
+      }
+      else{
+       alert('incorrect')
+      }
+    }
+    else{
+     alert('no user')
+    }
+ 
+   }
+   
 
 }
